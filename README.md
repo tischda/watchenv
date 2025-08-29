@@ -1,4 +1,5 @@
 ﻿![Build Status](https://github.com/tischda/watchenv/actions/workflows/build.yml/badge.svg)
+[![Go Report Card](https://goreportcard.com/badge/github.com/tischda/watchenv)](https://goreportcard.com/report/github.com/tischda/watchenv)
 
 # watchenv
 
