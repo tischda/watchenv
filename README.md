@@ -1,4 +1,6 @@
-﻿# watchenv
+﻿![Build Status](https://github.com/tischda/watchenv/actions/workflows/build.yml/badge.svg)
+
+# watchenv
 
 Windows utility that prints a message when environment variables are changed.
 
