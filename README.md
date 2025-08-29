@@ -5,11 +5,9 @@
 
 Windows utility that prints a message when environment variables are changed.
 
-It creates a hidden window that listens for WM_SETTINGCHANGED messages.
+It creates a hidden window that listens for `WM_SETTINGCHANGED` messages.
 
 ### Install
-
-There are no dependencies.
 
 ~~~
 go install github.com/tischda/watchenv@latest
