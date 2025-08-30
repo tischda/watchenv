@@ -12,10 +12,17 @@ builds:
     goos:
       - windows
 
-archives:
-  - replacements:
-      386: i386
-      amd64: x86_64
+archives:   
+  # make OS and Arch compatible with the results of `uname`
+  - name_template: >-
+      {{ .ProjectName }}_
+      {{ .Tag | trimPrefix `v` }}_
+      {{ .Goos }}-
+      {{- if eq .Arch "amd64" }}x86_64
+      {{- else if eq .Arch "386" }}i386
+      {{- else }}{{ .Arch }}{{ end }}
+      {{- if .Arm }}v{{ .Arm }}{{ end }}
+    formats: [tar.gz]
     format_overrides:
       - goos: windows
         formats: [zip]
