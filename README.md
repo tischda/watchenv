@@ -1,9 +1,10 @@
-﻿![Build Status](https://github.com/tischda/watchenv/actions/workflows/build.yml/badge.svg)
+﻿[![Build Status](https://github.com/tischda/watchenv/actions/workflows/build.yml/badge.svg)](https://github.com/tischda/watchenv/actions/workflows/build.yml)
+[![Test Status](https://github.com/tischda/watchenv/actions/workflows/test.yml/badge.svg)](https://github.com/tischda/watchenv/actions/workflows/test.yml)
 [![Go Report Card](https://goreportcard.com/badge/github.com/tischda/watchenv)](https://goreportcard.com/report/github.com/tischda/watchenv)
 
 # watchenv
 
-Windows utility that prints a message when environment variables are changed.
+Prints a message when Windows environment variables have changed.
 
 It creates a hidden window that listens for `WM_SETTINGCHANGED` messages.
 
