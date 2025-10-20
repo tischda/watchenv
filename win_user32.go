@@ -94,14 +94,14 @@ func wndProc(hwnd HWND, msg uint32, wparam, lparam uintptr) uintptr {
 	case WM_SETTINGCHANGE:
 		// WM_SETTINGCHANGE is sent when system settings change, including environment variables.
 		if lparam != 0 {
-			str := windows.UTF16PtrToString((*uint16)(unsafe.Pointer(lparam)))
+			str := windows.UTF16PtrToString((*uint16)(unsafe.Pointer(lparam)))  //nolint:govet
 			if str == "Environment" {
 				log.Println("Environment changed")
 			}
 		}
 	case WM_DESTROY:
 		// Post a quit message to end the message loop.
-		procPostQuitMessage.Call(0)
+		procPostQuitMessage.Call(0)  //nolint:errcheck
 		return 0
 	}
 	// Call the default window procedure for unhandled messages.
@@ -163,7 +163,7 @@ func watch() {
 		if int32(ret) == 0 {
 			break // WM_QUIT received, exit loop
 		}
-		procTranslateMessage.Call(uintptr(unsafe.Pointer(&msg)))
-		procDispatchMessageW.Call(uintptr(unsafe.Pointer(&msg)))
+		procTranslateMessage.Call(uintptr(unsafe.Pointer(&msg)))  //nolint:errcheck
+		procDispatchMessageW.Call(uintptr(unsafe.Pointer(&msg)))  //nolint:errcheck
 	}
 }
