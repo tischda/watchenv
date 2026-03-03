@@ -1,6 +1,6 @@
 ﻿[![Build Status](https://github.com/tischda/watchenv/actions/workflows/build.yml/badge.svg)](https://github.com/tischda/watchenv/actions/workflows/build.yml)
 [![Linter Status](https://github.com/tischda/watchenv/actions/workflows/linter.yml/badge.svg)](https://github.com/tischda/watchenv/actions/workflows/linter.yml)
-[![License](https://img.shields.io/github/license/tischda/watchenv)](/LICENSE)
+[![License](https://img.shields.io/github/license/tischda/watchenv.svg)](/LICENSE)
 [![Release](https://img.shields.io/github/release/tischda/watchenv.svg)](https://github.com/tischda/watchenv/releases/latest)
 
 
